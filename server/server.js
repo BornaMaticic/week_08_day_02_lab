@@ -4,6 +4,9 @@ const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/create_router.js');
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
 const publicPath = path.join(__dirname, '../client/public');
 app.use(express.static(publicPath));
 
